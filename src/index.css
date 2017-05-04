@@ -2,3 +2,12 @@ body {
   min-height: 2000px;
   padding-top: 70px;
 }
+
+#search-box {
+  width: 200px;
+  transition: width .3s ease-in-out;
+}
+
+#search-box:focus {
+  width: 320px;
+}
