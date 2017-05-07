@@ -1,3 +1,5 @@
+// @flow
+
 import React, { Component } from 'react';
 import { Navbar, FormGroup, FormControl, Button, ButtonGroup, ButtonToolbar } from 'react-bootstrap';
 
