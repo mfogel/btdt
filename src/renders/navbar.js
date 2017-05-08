@@ -5,7 +5,7 @@ import ReactNbsp from 'react-nbsp';
 import { Navbar, FormGroup, FormControl, Button } from 'react-bootstrap'
 
 const NavBar = () => (
-  <Navbar fixedTop>
+  <Navbar fixedTop fluid>
     <Navbar.Header>
       <Navbar.Brand><a href="#">Been There, Done That</a></Navbar.Brand>
       <Navbar.Toggle />

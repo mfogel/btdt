@@ -6,7 +6,7 @@ import { Grid, Col, Row, Thumbnail, Button } from 'react-bootstrap'
 
 const Tile = () => (
   <Col xs={12} sm={6} md={4} lg={3}>
-    <Thumbnail src="https://react-bootstrap.github.io/assets/thumbnaildiv.png" alt="242x200">
+    <Thumbnail src="http://placehold.it/480x360" alt="480x360">
       <h3>Thumbnail label</h3>
       <p>Description</p>
       <p>
@@ -19,7 +19,7 @@ const Tile = () => (
 )
 
 const Tiles = () => (
-  <Grid>
+  <Grid fluid>
     <Row>
       <Tile />
       <Tile />
