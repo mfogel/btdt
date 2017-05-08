@@ -1,6 +1,6 @@
 // @flow
 
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import NavBar from './renders/navbar.js'
 import Tiles from './renders/tiles.js'
 
@@ -11,8 +11,8 @@ class App extends Component {
         <NavBar />
         <Tiles />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
