@@ -1,7 +1,8 @@
 // @flow
 
 import React from 'react';
-import { Navbar, FormGroup, FormControl, Button, ButtonGroup, ButtonToolbar } from 'react-bootstrap'
+import ReactNbsp from 'react-nbsp';
+import { Navbar, FormGroup, FormControl, Button } from 'react-bootstrap'
 
 const NavBar = () => (
   <Navbar fixedTop>
@@ -11,13 +12,10 @@ const NavBar = () => (
     </Navbar.Header>
     <Navbar.Collapse>
       <Navbar.Form pullRight>
-        <ButtonToolbar>
-
-          {/* TODO: change style to outline button with bootstrap v4 */}
-          <ButtonGroup><Button bsStyle="link">Log In</Button></ButtonGroup>
-
-          <ButtonGroup><Button bsStyle="success">Sign Up</Button></ButtonGroup>
-        </ButtonToolbar>
+        {/* TODO: change style of login button to outline with bootstrap v4 */}
+        <Button bsStyle="link">Log In</Button>
+        <ReactNbsp />
+        <Button bsStyle="success">Sign Up</Button>
       </Navbar.Form>
       <Navbar.Form pullLeft>
         <FormGroup>

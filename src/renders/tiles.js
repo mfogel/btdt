@@ -1,6 +1,7 @@
 // @flow
 
 import React from 'react';
+import ReactNbsp from 'react-nbsp'
 import { Grid, Col, Row, Thumbnail, Button } from 'react-bootstrap'
 
 const Tile = () => (
@@ -10,7 +11,7 @@ const Tile = () => (
       <p>Description</p>
       <p>
         <Button bsStyle="primary">Button</Button>
-	{' '}
+	<ReactNbsp />
         <Button bsStyle="default">Button</Button>
       </p>
     </Thumbnail>
