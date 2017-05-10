@@ -1,20 +1,18 @@
 // @flow
 
 import React from 'react';
-import ReactNbsp from 'react-nbsp'
-import { Grid, Col, Row, Thumbnail, Button } from 'react-bootstrap'
+import { Grid, Col, Row, Image, ButtonToolbar, Button } from 'react-bootstrap'
+import './tiles.css';
 
 const Tile = () => (
-  <Col xs={12} sm={6} md={4} lg={3}>
-    <Thumbnail src="http://placehold.it/480x360" alt="480x360">
-      <h3>Thumbnail label</h3>
-      <p>Description</p>
-      <p>
-        <Button bsStyle="primary">Button</Button>
-	<ReactNbsp />
-        <Button bsStyle="default">Button</Button>
-      </p>
-    </Thumbnail>
+  <Col className="tile" xs={12} sm={6} md={4} lg={3}>
+    <ButtonToolbar className="tile-actions">
+      <Button bsStyle="success"><span className="glyphicon glyphicon-ok"></span></Button>
+      <Button bsStyle="info"><span className="glyphicon glyphicon-refresh"></span></Button>
+      <Button bsStyle="warning"><span className="glyphicon glyphicon-star"></span></Button>
+    </ButtonToolbar>
+    <Image src="http://placehold.it/480x360" alt="480x360" rounded responsive/>
+    <h3 className="tile-description">Hike the Inca trail</h3>
   </Col>
 )
 

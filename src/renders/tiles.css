@@ -1,0 +1,22 @@
+.tile {
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.tile-actions {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 10px 25px 0 0;
+}
+
+.tile-description {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  padding: 0 25px 10px 25px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
