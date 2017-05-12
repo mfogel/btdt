@@ -5,7 +5,7 @@ import { Grid, Col, Row, Image, ButtonToolbar, Button } from 'react-bootstrap'
 import './tiles.css';
 
 const Tile = () => (
-  <Col xs={12} sm={6} md={4} lg={3}>
+  <Col xs={12} sm={6} md={4}>
     <div className="tile">
       <ButtonToolbar className="tile-actions">
         <Button bsStyle="success"><span className="glyphicon glyphicon-ok"></span></Button>

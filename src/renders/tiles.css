@@ -2,6 +2,9 @@
   position: relative;
   margin-bottom: 15px;
   cursor: zoom-in;
+  max-width: 480px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .tile-actions {
