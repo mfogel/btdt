@@ -1,22 +1,38 @@
 .tile {
   position: relative;
-  padding-bottom: 15px;
+  margin-bottom: 15px;
+  cursor: zoom-in;
 }
 
 .tile-actions {
   position: absolute;
-  right: 0;
-  top: 0;
-  padding: 10px 25px 0 0;
+  right: 10px;
+  top: 10px;
 }
 
-.tile-description {
+.tile-bottom-bar {
   position: absolute;
   width: 100%;
-  left: 0;
   bottom: 0;
-  padding: 0 25px 10px 25px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  padding: 0 10px 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.tile-title {
+  margin: 0;
+}
+
+.tile-tag-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  text-align: right;
+}
+
+.tile-tag {
+  font-style: italic;
+  margin-top: 5px;
+  border-radius: 20px !important;
 }
