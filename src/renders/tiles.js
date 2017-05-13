@@ -2,42 +2,50 @@
 
 import React from 'react';
 import { Grid, Col, Row, Image, ButtonToolbar, Button } from 'react-bootstrap'
+import { withRouter } from 'react-router-dom'
 import './tiles.css';
 
-const Tile = () => (
+const TagListElem = ({ tag }) => (
+  <li>
+    <Button className="tile-tag" bsSize="xs" bsStyle="info">
+      <span className="glyphicon glyphicon-tag"></span>{tag}
+    </Button>
+  </li>
+)
+
+const Tile = withRouter(({ history, goal }) => (
   <Col xs={12} sm={6} md={4}>
-    <div className="tile">
+    <div className="tile" onClick={() => history.push('/goals/' + goal.slug + '-' + goal.id)}>
       <ButtonToolbar className="tile-actions">
         <Button bsStyle="success"><span className="glyphicon glyphicon-ok"></span></Button>
-        <Button bsStyle="info"><span className="glyphicon glyphicon-refresh"></span></Button>
-        <Button bsStyle="warning"><span className="glyphicon glyphicon-star"></span></Button>
+        <Button bsStyle="info"><span className="glyphicon glyphicon-option-horizontal"></span></Button>
+        <Button bsStyle="warning"><span className="glyphicon glyphicon-pushpin"></span></Button>
       </ButtonToolbar>
-      <Image src="http://placehold.it/480x360" alt="480x360" rounded responsive/>
-      <p className="tile-bottom-bar">
-        <h3 className="tile-title">Hike the Inca trail</h3>
+      <Image src={goal.imageUrl} alt={goal.title} rounded responsive/>
+      <div className="tile-bottom-bar">
+        <h3 className="tile-title">{goal.title}</h3>
         <ul className="tile-tag-list">
-          <li><Button className="tile-tag" bsSize="xs" bsStyle="info"><span className="glyphicon glyphicon-tag"></span>travel</Button></li>
+          {goal.tags.map((tag) => <TagListElem key={tag} tag={tag} />)}
         </ul>
-      </p>
+      </div>
     </div>
   </Col>
-)
+))
+
+const getSampleGoal = () => ({
+  id: Math.floor(Math.random()*10000),
+  slug: 'travel-kansas',
+  title: 'Travel Kansas',
+  tags: ['travel'],
+  imageUrl: 'http://placehold.it/480x360',
+})
+
+const goals = [...Array(9).keys()].map(getSampleGoal)
 
 const Tiles = () => (
   <Grid fluid>
     <Row>
-      <Tile />
-      <Tile />
-      <Tile />
-      <Tile />
-      <Tile />
-      <Tile />
-      <Tile />
-      <Tile />
-      <Tile />
-      <Tile />
-      <Tile />
-      <Tile />
+      {goals.map((goal) => <Tile key={goal.id} goal={goal} />)}
     </Row>
   </Grid>
 )
