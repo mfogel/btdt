@@ -17,9 +17,8 @@ const Tile = withRouter(({ history, goal }) => (
   <Col xs={12} sm={6} md={4}>
     <div className="tile" onClick={() => history.push('/goals/' + goal.slug + '-' + goal.id)}>
       <ButtonToolbar className="tile-actions">
-        <Button bsStyle="success"><span className="glyphicon glyphicon-ok"></span></Button>
-        <Button bsStyle="info"><span className="glyphicon glyphicon-option-horizontal"></span></Button>
-        <Button bsStyle="warning"><span className="glyphicon glyphicon-pushpin"></span></Button>
+        <Button bsStyle="warning"><span className="glyphicon glyphicon-unchecked"></span></Button>
+        <Button bsStyle="info"><span className="glyphicon glyphicon-star-empty"></span></Button>
       </ButtonToolbar>
       <Image src={goal.imageUrl} alt={goal.title} rounded responsive/>
       <div className="tile-bottom-bar">
@@ -40,7 +39,7 @@ const getSampleGoal = () => ({
   imageUrl: 'http://placehold.it/480x360',
 })
 
-const goals = [...Array(9).keys()].map(getSampleGoal)
+const goals = [...Array(12).keys()].map(getSampleGoal)
 
 const Tiles = () => (
   <Grid fluid>

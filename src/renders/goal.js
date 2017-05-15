@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from 'react-bootstrap'
+import { Button, ButtonToolbar } from 'react-bootstrap'
 import './goal.css';
 
 const sampleGoal = {
@@ -13,11 +13,11 @@ const sampleGoal = {
 const Goal = ({match}) => (
   <div className="goal" style={{backgroundImage: 'url(' + sampleGoal.imageUrl + ')'}}>
     <div className="goal-topbar">
-      <div className="goal-title">
-        <h3>{sampleGoal.title}:</h3>
-        <h4><em><span className="glyphicon glyphicon-remove"></span>Incomplete</em></h4>
-      </div>
-      <p className="goal-actions"><Button bsStyle="success"><span className="glyphicon glyphicon-ok"></span></Button></p>
+      <ButtonToolbar className="goal-actions">
+        <Button bsStyle="warning"><span className="glyphicon glyphicon-unchecked"></span> Incomplete</Button>
+        <Button bsStyle="info"><span className="glyphicon glyphicon-star-empty"></span> Save</Button>
+      </ButtonToolbar>
+      <h2 className="goal-title">{sampleGoal.title}</h2>
     </div>
   </div>
 )

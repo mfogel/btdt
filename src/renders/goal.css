@@ -9,16 +9,15 @@
 }
 
 .goal-topbar {
-  display: flex;
-  justify-content: space-between;
+  margin: 15px 20px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid lightgrey;
 }
 
-.goal-title h3,
-.goal-title h4 {
-  display: inline-block;
-  margin: 20px 0 0 20px;
+.goal-title {
+  margin: 0;
 }
 
 .goal-actions {
-  margin: 20px;
+  float: right;
 }
