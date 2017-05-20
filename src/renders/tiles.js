@@ -17,8 +17,8 @@ const Tile = withRouter(({ history, goal }) => (
   <Col xs={12} sm={6} md={4}>
     <div className="tile" onClick={() => history.push('/goals/' + goal.slug + '-' + goal.id)}>
       <ButtonToolbar className="tile-actions">
-        <Button bsStyle="warning"><span className="glyphicon glyphicon-unchecked"></span></Button>
         <Button bsStyle="info"><span className="glyphicon glyphicon-star-empty"></span></Button>
+        <Button bsStyle="primary"><span className="glyphicon glyphicon-share"></span></Button>
       </ButtonToolbar>
       <Image src={goal.imageUrl} alt={goal.title} rounded responsive/>
       <div className="tile-bottom-bar">

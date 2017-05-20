@@ -1,15 +1,15 @@
 .goal {
   position: absolute;
-  width: 100%;
+  width: calc(100% - 40px);
   height: calc(100% - 51px);
-  margin-top: -20px;
+  margin: -20px 20px 0 20px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 .goal-topbar {
-  margin: 15px 20px;
+  margin: 15px 0;
   padding-bottom: 5px;
   border-bottom: 1px solid lightgrey;
 }

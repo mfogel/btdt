@@ -14,8 +14,8 @@ const Goal = ({match}) => (
   <div className="goal" style={{backgroundImage: 'url(' + sampleGoal.imageUrl + ')'}}>
     <div className="goal-topbar">
       <ButtonToolbar className="goal-actions">
-        <Button bsStyle="warning"><span className="glyphicon glyphicon-unchecked"></span> Incomplete</Button>
-        <Button bsStyle="info"><span className="glyphicon glyphicon-star-empty"></span> Save</Button>
+        <Button bsStyle="info"><span className="glyphicon glyphicon-star-empty"></span><span className="hidden-xs"> Save</span></Button>
+        <Button bsStyle="primary"><span className="glyphicon glyphicon-share"></span><span className="hidden-xs"> Share</span></Button>
       </ButtonToolbar>
       <h2 className="goal-title">{sampleGoal.title}</h2>
     </div>
